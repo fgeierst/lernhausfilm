@@ -1,0 +1,1 @@
+browser-sync start --f "*.*" --proxy "lernhausfilm.local"

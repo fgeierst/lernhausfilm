@@ -1,0 +1,404 @@
+/*
+Theme Name: Lernhausfilm-blankslate
+Author: Florian Geierstanger
+based on blankslate
+*/
+
+
+/* ---- css variables  */
+
+:root {
+	--color-red: #E75764;
+	--color-text: #343434;
+	--color-headings: #454647;
+	--color-grey: #F2F2F2;
+	--color-blue: #A3C9D9;
+	--gap: 1em;
+
+}
+
+/* ---- reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline
+}
+
+body {
+	line-height: 1
+}
+
+button {
+	outline: 0
+}
+
+ol,
+ul {
+	list-style: none
+}
+
+blockquote,
+q {
+	quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none
+}
+
+q {
+	display: inline;
+	font-style: italic
+}
+
+q:before {
+	content: '"';
+	font-style: normal
+}
+
+q:after {
+	content: '"';
+	font-style: normal
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="search"],
+input[type="password"] {
+	-webkit-appearance: none;
+	appearance: none;
+	border-radius: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+th,
+td {
+	padding: 2px
+}
+
+big {
+	font-size: 120%
+}
+
+small,
+sup,
+sub {
+	font-size: 80%
+}
+
+sup {
+	vertical-align: super
+}
+
+sub {
+	vertical-align: sub
+}
+
+dd {
+	margin-left: 20px
+}
+
+kbd,
+tt {
+	font-family: courier;
+	font-size: 12px
+}
+
+ins {
+	text-decoration: underline
+}
+
+del,
+strike,
+s {
+	text-decoration: line-through
+}
+
+dt {
+	font-weight: bold
+}
+
+address,
+cite,
+var {
+	font-style: italic
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* --- custom styling */
+
+body {
+	font-family: 'Recursive', Arial, Helvetica, sans-serif;
+	font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+	line-height: 1.4;
+	color: var(--color-text);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-variation-settings: "MONO"1;
+	letter-spacing: 0.03em;
+	color: var(--color-headings);
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns:  [main-start] 1fr [content-start] minmax(min-content, 50rem) [content-end] 1fr [main-end] ;
+
+}
+
+#wrapper>* {
+	padding-left: 1em;
+	padding-right: 1em;
+	grid-column-start: content-start;
+	grid-column-end: content-end;
+}
+
+#header {
+	grid-column-start: main-start;
+	grid-column-end: main-end;
+	padding-top: 1em;
+	background-color: var(--color-grey);
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	column-gap: 1em;
+}
+
+#site-title {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+#site-title a {
+	text-transform: uppercase;
+	color: var(--color-red);
+	font-weight: 900;
+	font-size: 1.5em;
+	letter-spacing: 0.2em;
+	text-decoration: none;
+
+}
+
+.menu a {
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	color: unset;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .3em;
+}
+
+.menu>li {
+	padding: .5em;
+	transition: all 0.1s ease-out;
+}
+
+.current-menu-item,
+.menu-item:hover,
+.menu:hover .current-menu-item:hover {
+	background-color: var(--color-red);
+}
+
+.menu:hover .current-menu-item {
+	background-color: unset;
+}
+
+.current-menu-item a,
+.menu-item:hover a,
+.menu:hover .menu-item:hover a {
+	color: white;
+}
+
+.menu:hover .current-menu-item a {
+	color: unset;
+}
+
+
+#footer {
+	grid-column-start: main-start;
+	grid-column-end: main-end;
+}
+
+#container {
+	padding-top: 1em;
+}
+
+
+/* .alignwide {
+	background-color: var(--color-red);
+} */
+/* .alignwide::after {
+	content: "wide width";
+} */
+
+/* .alignfull {
+	background-color: var(--color-red);
+} */
+/* .alignfull::after {
+	content: "full width";
+} */
+
+
+/* Gutenberg Text Colors */
+.has-primary-color {
+	color: var(--color-red);
+}
+
+.has-accent-color {
+	color: var(--color-blue);
+}
+
+.has-light-gray-color {
+	color: var(--color-grey);
+}
+
+.has-dark-gray-color {
+	color: var(--color-headings);
+}
+
+/* Gutenberg Background Colors */
+.has-primary-background-color {
+	background-color: var(--color-red);;
+}
+
+.has-accent-background-color {
+	background-color: var(--color-blue);
+}
+
+.has-light-gray-background-color {
+	background-color: var(--color-grey);
+}
+
+.has-dark-gray-background-color {
+	background-color: var(--color-headings);
+}
+
+/* fix block images aspect ratio  */
+
+.wp-block-image img, .wp-block-image svg {
+	max-width:100%;
+	height:auto;
+}
