@@ -1,3 +1,4 @@
-# Wordpress theme for lernhausfilm.de
+# lernhausfilm
 
+* Wordpress theme for http://lernhausfilm.de/
 * based on blankslate
