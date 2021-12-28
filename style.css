@@ -14,7 +14,8 @@ based on blankslate
 	--color-grey: #F2F2F2;
 	--color-blue: #A3C9D9;
 	--gap: 1em;
-
+	--font-headings: 'Recursive', Arial, Helvetica, sans-serif;
+	--font-text: system-ui, sans-serif;
 }
 
 /* ---- reset */
@@ -245,7 +246,7 @@ section {
 /* --- custom styling */
 
 body {
-	font-family: 'Recursive', Arial, Helvetica, sans-serif;
+	font-family: var(--font-text);
 	font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
 	line-height: 1.4;
 	color: var(--color-text);
@@ -259,6 +260,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: var(--font-headings);
 	font-variation-settings: "MONO"1;
 	letter-spacing: 0.03em;
 	color: var(--color-headings);
@@ -311,6 +313,7 @@ h6 {
 }
 
 .menu {
+	font-family: var(--font-headings);
 	display: flex;
 	flex-wrap: wrap;
 	gap: .3em;
