@@ -1,2 +1,4 @@
 # lernhausfilm
-Wordpress theme for http://lernhausfilm.de/
+
+- [Work in progress] New wordpress theme for http://lernhausfilm.de/
+- based on blankslate 
