@@ -33,3 +33,12 @@ if ( ! function_exists( 'lhfb_setup' ) ) {
         }
 }
 add_action( 'after_setup_theme', 'lhfb_setup' );
+
+/**
+ * Remove jQuery JavaScript
+ * 
+ */
+function lhfb_jquery_enqueue() {
+	wp_deregister_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'lhfb_jquery_enqueue' );
