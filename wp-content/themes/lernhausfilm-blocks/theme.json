@@ -1,5 +1,6 @@
 {
     "$schema": "https://schemas.wp.org/wp/6.1/theme.json",
+    "version": 2,
     "settings": {
         "appearanceTools": true,
         "layout": {
@@ -21,7 +22,7 @@
                 {
                     "fontFamily": "system-ui, sans-serif",
                     "name": "System Font",
-                    "slug": "system-font"
+                    "slug": "system"
                 }
            ]
         }
@@ -36,5 +37,9 @@
             "name": "footer"
         }
     ],
-    "version": 2
+    "styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--system)"		
+        }
+	}
 }
