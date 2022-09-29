@@ -1,0 +1,10 @@
+name: lernhausfilm
+type: wordpress
+docroot: ""
+nfs_mount_enabled: false
+mutagen_enabled: true
+
+# WebServer settings
+php_version: "8.0"
+mysql_version: "8.0"
+webserver_type: nginx-fpm

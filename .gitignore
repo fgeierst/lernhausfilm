@@ -1,0 +1,26 @@
+# Ignore all ...
+/*
+
+# ... but track specific files / folders: 
+
+# General files
+!.gitignore
+!/README.md
+!/LICENSE
+
+# DDEV config and provider script
+!/.ddev
+/.ddev/*
+!/.ddev/config.yaml
+!/.ddev/providers
+/.ddev/providers/*
+!/.ddev/providers/ssh.yaml
+
+# Child theme:
+!/wp-content
+/wp-content/*
+!/wp-content/themes
+/wp-content/themes/*
+!/wp-content/themes/lernhausfilm-bootcake
+!/wp-content/themes/lernhausfilm-blankslate
+!/wp-content/themes/lernhausfilm-blocks
